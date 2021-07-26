@@ -3,7 +3,7 @@ import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
 const Stack=createStackNavigator();
-AppNavigation(props)=>{
+function AppNavigation(props){
     return<Stack.Navigator>
         <Stack.Screen
             name="Intro"
@@ -11,6 +11,7 @@ AppNavigation(props)=>{
             options={{ headerShown:false }}
         />
     </Stack.Navigator>
+    
 }
 
 export default AppNavigation;

@@ -2,7 +2,7 @@ import { Image, ImageBackground, StyleSheet, Text, TouchableOpacity, View } from
 
 import React from 'react';
 
-function Intro(props) {
+function Intro({navigation}) {
     return <ImageBackground
         source={require("../assets/background.png")}
         style={{ flex: 1 }}
@@ -30,18 +30,22 @@ function Intro(props) {
                 maintenant
             </Text>
         </View>
-        <View style={{ flex: 1, justifyContent: 'flex-end' }}>
-            <View style={{ padding: 10, width: '100%', flexDirection: "row", justifyContent: "space-evenly" }}>
+        <View style={{ flex: 1, justifyContent: "flex-end" }}>
+            <View style={{ padding: 10, width: "100%", flexDirection: "row", justifyContent: "space-evenly" }}>
                 <TouchableOpacity style=
                     {{
                         backgroundColor: "white",
                         borderRadius: 10,
                         justifyContent: "center",
-                        alignItems: 'center', padding: 15, width: "45%", marginVertical: 10,
-                    }} onPress={()=>navigation.navigate("Login")}>
+                        alignItems: 'center',
+                        padding: 15, 
+                        width: "45%",
+                        marginVertical: 10,
+                    }} 
+                    onPress={()=>navigation.navigate("Login")}>
                     <Text style={{
                         color: "black", textTransform: "uppercase", fontSize: 12
-                        , lineHeight: 15, width: 80
+                        , lineHeight: 15, width: 80,
                     }}>connexion</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style=
@@ -59,7 +63,7 @@ function Intro(props) {
                     >
                     <Text style={{
                         color: "white", textTransform: "uppercase", fontSize: 12
-                        , lineHeight: 15, width: 80
+                        , lineHeight: 15, width: 90,fontWeight:"bold",
                     }}>inscription</Text>
                 </TouchableOpacity>
             </View>

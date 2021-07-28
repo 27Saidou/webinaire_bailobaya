@@ -3,7 +3,7 @@ import { Image, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import ConnexionPhone from '../../screens/auth/ConnexionPhone';
 import React from 'react'
 
-const Login = ({navigation}) => {
+const Register = ({ navigation }) => {
     return (
         <View
             style={{
@@ -20,7 +20,26 @@ const Login = ({navigation}) => {
                 />
             </View>
             <View>
-                <Text>Conectez-vous</Text>
+                <Text>Inscrivez-vous</Text>
+            </View>
+            <View
+                style={{
+                    backgroundColor: '#fff',
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    height: 50,
+                    marginTop: 30,
+                    width: '100%',
+                    borderColor: '#F1F1F1',
+                    borderRadius: 1,
+                    borderRadius: 10
+                }}
+            >
+                <TextInput
+                    placeholder={'prenom & nom'}
+                    placeholderTextColor={'#5A5A5A'}
+                    style={{ paddingLeft: 10 }}
+                />
             </View>
             <View
                 style={{
@@ -60,12 +79,24 @@ const Login = ({navigation}) => {
                     style={{ paddingLeft: 10 }}
                 />
             </View>
-            <View style={{ marginTop: 10, alignSelf: "flex-end" }}>
-                <Text style=
-                    {{
-                        color: "rgba(0,0,0.8)",
-                        fontSize: 12
-                    }}>Mot de passe oublié ?</Text>
+            <View
+                style={{
+                    backgroundColor: '#fff',
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    height: 50,
+                    marginTop: 30,
+                    width: '100%',
+                    borderColor: '#F1F1F1',
+                    borderRadius: 1,
+                    borderRadius: 10
+                }}
+            >
+                <TextInput
+                    placeholder={'Confirmez mot de passe'}
+                    placeholderTextColor={'#5A5A5A'}
+                    style={{ paddingLeft: 10 }}
+                />
             </View>
             <View style={{ width: "100%", marginTop: 30 }}>
                 <TouchableOpacity style={{
@@ -74,23 +105,18 @@ const Login = ({navigation}) => {
                     justifyContent: "center",
                     borderRadius: 10
                 }}>
-                    <Text style={{ color: "#FFF" }}>se connecter</Text>
+                    <Text style={{ color: "#FFF" }}>S'inscrire</Text>
                 </TouchableOpacity>
             </View>
-            <View style={{ width: "100%", marginTop: 30 }}>
-                <TouchableOpacity style={{
-                    backgroundColor: "#fff", height: 50,
-                    alignItems: "center",
-                    justifyContent: "center",
-                    borderColor: "#11BD9E",
-                    borderRadius: 10, borderWidth: 1,
-                }}
-                onPress={()=>navigation.navigate("ConnexionPhone")}
-                >
-                <Text style={{}}>se connecter avec un numero</Text>
+            <View style={{ marginTop: 50 }}>
+                <TouchableOpacity onPress={()=> navigation.navigate('Login')}>
+                    <Text>
+                        Déja inscrit ?
+                        <Text style={{ fontWeight: "bold" }}>Se connecter</Text>
+                    </Text>
                 </TouchableOpacity>
             </View>
         </View>
     )
 }
-export default Login
+export default Register

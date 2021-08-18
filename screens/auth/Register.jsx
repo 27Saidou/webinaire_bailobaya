@@ -15,7 +15,7 @@ const Register = ({ navigation }) => {
             }}
         >
             <View style={{ margin: 20 }}>
-                <Image source={require("../../assets/logoVert.png")}
+                <Image source={require("../../assets/logo_vert.png")}
                     style={{ width: 36, height: 38 }}
                 />
             </View>
